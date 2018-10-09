@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/controlsfx-8.40.14/controlsfx-8.40.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/controlsfx-8.40.14/controlsfx-samples-8.40.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/controlsfx-8.40.14/fxsampler-1.0.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/java-json.jar/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/httpclient-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/httpcore-4.4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/httpmime-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-core-4.4.10-bin/httpcomponents-core-4.4.10/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-core-4.4.10-bin/httpcomponents-core-4.4.10/lib/httpcore-4.4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-core-4.4.10-bin/httpcomponents-core-4.4.10/lib/httpcore-ab-4.4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-core-4.4.10-bin/httpcomponents-core-4.4.10/lib/httpcore-nio-4.4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-asyncclient-4.1.4-bin/httpcomponents-asyncclient-4.1.4/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-asyncclient-4.1.4-bin/httpcomponents-asyncclient-4.1.4/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-asyncclient-4.1.4-bin/httpcomponents-asyncclient-4.1.4/lib/httpasyncclient-4.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-asyncclient-4.1.4-bin/httpcomponents-asyncclient-4.1.4/lib/httpasyncclient-cache-4.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-asyncclient-4.1.4-bin/httpcomponents-asyncclient-4.1.4/lib/httpclient-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-asyncclient-4.1.4-bin/httpcomponents-asyncclient-4.1.4/lib/httpclient-cache-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-asyncclient-4.1.4-bin/httpcomponents-asyncclient-4.1.4/lib/httpcore-4.4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-asyncclient-4.1.4-bin/httpcomponents-asyncclient-4.1.4/lib/httpcore-nio-4.4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/fluent-hc-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/httpclient-cache-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/httpclient-win-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/jna-4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/httpcomponents-client-4.5.6-bin/httpcomponents-client-4.5.6/lib/jna-platform-4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sgarc/Downloads/unirest-java-1.4.9.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

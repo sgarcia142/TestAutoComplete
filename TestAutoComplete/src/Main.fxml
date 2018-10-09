@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <TextField fx:id="input" layoutX="32.0" layoutY="56.0" prefHeight="25.0" prefWidth="257.0" />
+      <Label layoutX="32.0" layoutY="33.0" text="Auto Complete Text Field" />
+      <Button fx:id="foodButton" layoutX="300.0" layoutY="56.0" mnemonicParsing="false" onAction="#handle" text="Select" />
+      <TextField fx:id="txtCalories" layoutX="32.0" layoutY="290.0" prefHeight="25.0" prefWidth="90.0" />
+      <Label layoutX="32.0" layoutY="273.0" text="Calories" />
+      <TextField fx:id="txtFat" layoutX="140.0" layoutY="290.0" prefHeight="25.0" prefWidth="78.0" />
+      <Label layoutX="140.0" layoutY="273.0" text="Fat" />
+      <ImageView fx:id="imgFood" fitHeight="292.0" fitWidth="339.0" layoutX="385.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
