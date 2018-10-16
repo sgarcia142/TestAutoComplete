@@ -3,21 +3,17 @@ import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.Set;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import org.controlsfx.control.textfield.TextFields;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,25 +35,21 @@ public class MainController implements Initializable {
 	@FXML
 	private Button foodButton;
 	@FXML
-	private TextField txtCalories;
-	@FXML
-	private TextField txtFat;
-	@FXML
 	private ImageView imgFood; 
-	
+	@FXML
+	private Label lblCalories;
+	@FXML
+	private Label lblCalFromFat;
+	@FXML
+	private Label lblTotalFat;
+	@FXML 
+	private Label tblTotalFatPercent;
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		input.textProperty().addListener((observable, oldValue, newValue) -> {
-			// Try it with a list
-			//List<String> possibleSelections = searchItemThroughInstant(newValue);
 			// Try it with an ArrayList
 			ArrayList<String> possibleSelections = searchItemInstant(newValue);
-			// Try to bring over the Item Name and the ID 
-			//Map<String,String> hm = searchItemThroughInstant(newValue);
-			//Set< Map.Entry< String,String> > possibleSelections = hm.entrySet();
-			// Test output to see what is being returned
-			//System.out.println(possibleSelections);
 			// Create a textfield binding and supply the object the field being bound and a list of possible selections
 			AutoCompletionTextFieldBinding<String> autoCompletionTextFieldBinding = new AutoCompletionTextFieldBinding<>(input, SuggestionProvider.create(possibleSelections));
 			// Only allow 8 rows of the results to be displayed
@@ -71,8 +63,9 @@ public class MainController implements Initializable {
 	 */
 	public void handle(ActionEvent event) {
 		Food food = searchItemNutrients(input.getText());
-		txtCalories.setText(food.getCalories());
-		txtFat.setText(food.getFat());
+		lblCalories.setText(food.getCalories());
+		lblCalFromFat.setText(String.valueOf(Integer.parseInt(food.getFat())*9));
+		lblTotalFat.setText(food.getFat()+"g");
 		Image img = new Image(food.getImgURL());
 		imgFood.setImage(img);
 	}	
@@ -84,12 +77,7 @@ public class MainController implements Initializable {
 	 * @return ArrayList: (String)
 	 */
 	public static ArrayList<String> searchItemInstant(String s){
-	//public static Map<String, String> searchItemThroughInstant(String s){
-	//public static List<String> searchItemThroughInstant(String s){
-		//ArrayList<String> items = new ArrayList<String>(); 
-		//Map<String,String> m1 = new HashMap<String,String>();
 		ArrayList<String> possibleSelections = new ArrayList<String>();
-		//List<String> possibleSelections = null;
 		String encodedUrl;
 		try {
 			encodedUrl = URLEncoder.encode(s, "UTF-8");
@@ -118,7 +106,6 @@ public class MainController implements Initializable {
 	 * @return
 	 */
 	public static Food searchItemNutrients(String s){ 
-		//ArrayList<String> items = new ArrayList<String>(); 
 		Food food = new Food("","",""); 
 		try {
 			System.out.println(s);
@@ -131,7 +118,7 @@ public class MainController implements Initializable {
 			JSONArray jsonArray = response.getBody().getObject().getJSONArray("foods");
 			for(int i = 0; i < jsonArray.length(); i++) {
 				JSONObject jsonObj = jsonArray.getJSONObject(i); 
-				//System.out.println(jsonObj.toString());
+				System.out.println(jsonObj.toString());
 				//System.out.print(jsonObj.get("food_name").toString());
 				//System.out.print(" - ");
 				//System.out.println(jsonObj.get("nix_item_id").toString());
@@ -140,6 +127,11 @@ public class MainController implements Initializable {
 				food.setFat(jsonObj.get("nf_total_fat").toString());
 				JSONObject photo = jsonObj.getJSONObject("photo");
 				food.setImgURL(photo.getString("highres").toString());
+				JSONArray fullNutrients = jsonObj.getJSONArray("full_nutrients");
+				for(int j = 0; j < fullNutrients.length(); j++) {
+					JSONObject jObj = fullNutrients.getJSONObject(j);
+					System.out.println(jObj.toString());
+				}
 			}	
 		} catch (UnirestException | JSONException e) {
 			e.printStackTrace();

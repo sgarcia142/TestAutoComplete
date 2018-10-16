@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-stylesheet button-like.css?>
 
 <AnchorPane fx:id="root" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
    <children>
       <TextField fx:id="input" layoutX="32.0" layoutY="56.0" prefHeight="25.0" prefWidth="257.0" />
       <Label layoutX="32.0" layoutY="33.0" text="Auto Complete Text Field" />
-      <Button fx:id="foodButton" layoutX="300.0" layoutY="56.0" mnemonicParsing="false" onAction="#handle" text="Select" />
-      <TextField fx:id="txtCalories" layoutX="32.0" layoutY="290.0" prefHeight="25.0" prefWidth="90.0" />
-      <Label layoutX="32.0" layoutY="273.0" text="Calories" />
-      <TextField fx:id="txtFat" layoutX="140.0" layoutY="290.0" prefHeight="25.0" prefWidth="78.0" />
-      <Label layoutX="140.0" layoutY="273.0" text="Fat" />
-      <ImageView fx:id="imgFood" fitHeight="292.0" fitWidth="339.0" layoutX="385.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="foodButton" layoutX="300.0" layoutY="56.0" mnemonicParsing="false" onAction="#handle" styleClass="button-like" stylesheets="@application/application.css" text="Select" />
+      <ImageView fx:id="imgFood" fitHeight="292.0" fitWidth="339.0" layoutX="74.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane layoutX="401.0" layoutY="52.0" prefHeight="494.0" prefWidth="288.0" styleClass="testing">
+         <children>
+            <Label layoutX="12.0" layoutY="10.0" prefHeight="42.0" prefWidth="263.0" text="Nutrition Facts">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="263.0" style="-fx-background-color: black;" />
+            <Label layoutX="13.0" layoutY="63.0" text="Amount Per Serving">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1.0" prefWidth="263.0" style="-fx-background-color: black;" />
+            <Label layoutX="13.0" layoutY="84.0" text="Calories">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCalories" layoutX="61.0" layoutY="84.0" prefHeight="17.0" prefWidth="55.0" />
+            <Label layoutX="153.0" layoutY="84.0" text="Calories from fat" />
+            <Label layoutX="11.0" layoutY="101.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4.0" prefWidth="263.0" style="-fx-background-color: black;" />
+            <Label fx:id="lblCalFromFat" alignment="CENTER_RIGHT" layoutX="237.0" layoutY="84.0" prefHeight="17.0" prefWidth="34.0" />
+            <Label layoutX="11.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1.0" prefWidth="263.0" style="-fx-background-color: black;" />
+            <Label layoutX="174.0" layoutY="107.0" prefHeight="17.0" prefWidth="101.0" text="\% of Daily Value*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="124.0" text="Total Fat" />
+            <Label fx:id="lblTotalFat" layoutX="67.0" layoutY="124.0" prefHeight="17.0" prefWidth="55.0" />
+            <Label fx:id="tblTotalFatPercent" layoutX="250.0" layoutY="124.0" prefHeight="17.0" prefWidth="26.0" text="100" />
+        </children>
+      </Pane>
    </children>
 </AnchorPane>
