@@ -63,11 +63,11 @@ public class MainController implements Initializable {
 	 */
 	public void handle(ActionEvent event) {
 		Food food = searchItemNutrients(input.getText());
-		lblCalories.setText(food.getCalories());
-		lblCalFromFat.setText(String.valueOf(Integer.parseInt(food.getFat())*9));
-		lblTotalFat.setText(food.getFat()+"g");
-		Image img = new Image(food.getImgURL());
-		imgFood.setImage(img);
+		//lblCalories.setText(food.getCalories());
+		//lblCalFromFat.setText(String.valueOf(Integer.parseInt(food.getFat())*9));
+		//lblTotalFat.setText(food.getFat()+"g");
+		//Image img = new Image(food.getImgURL());
+		//imgFood.setImage(img);
 	}	
 	
 	/**
